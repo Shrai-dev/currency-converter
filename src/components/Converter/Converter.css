@@ -1,0 +1,17 @@
+.input__amount {
+	width: 13em;
+	height: 2.5em;
+	border: 1px solid #4d4d4d;
+	border-radius: 0.3em;
+	padding: 0.25rem;
+	font-size: 1.1em;
+}
+
+.select__currency {
+	width: 4em;
+	height: 2.45em;
+	margin-left: 1rem;
+	border: 1px solid #4d4d4d;
+	border-radius: 0.3em;
+	font-size: 1.1em;
+}
