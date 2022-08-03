@@ -17,7 +17,7 @@ function App() {
 	let toAmount, fromAmount;
 	if (amountFromCurrency) {
 		fromAmount = amount;
-		toAmount = amount * exchangeRate;
+		toAmount = amount * exchangeRate || 0;
 	} else {
 		toAmount = amount;
 		fromAmount = amount / exchangeRate;
@@ -28,7 +28,7 @@ function App() {
 			.then((res) => res.json())
 			.then((data) => {
 				setCurrencyList([...Object.keys(data.rates)]);
-				const firstCurrency = currencyList[0];
+				const firstCurrency = Object.keys(data.rates)[0];
 				setFromCurrency(data.base);
 				setEurRates(data.rates['UAH'].toFixed(2));
 				setUsdRates((data.rates['UAH'] / data.rates['USD']).toFixed(2));
